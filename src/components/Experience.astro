@@ -1,0 +1,46 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIECE = [
+    {
+        date: "2024 - Actualmente...",
+        title: "Redsys - Desarrolador Android",
+        description:
+            "Desarrollo de solución IoT para terminales o puntos de pago, aplicando Clean Architecture para desarrollar sistemas escalables y flexibles, adaptados a los requisitos de instituciones bancarias. Actualmente lidero proyectos personalizados para BBVA y OpenPay Perú, garantizando calidad, integración eficiente y cumplimiento de estándares financieros.",
+    },
+    {
+        date: "2022 - 2024",
+        title: "Wefeel game - Principal software engineer",
+        description:
+            "Desarrolle APIs REST con Django y Python, microservicios escalables, bases de datos PostgreSQL y tareas en segundo plano con Celery. Lideré proyectos móviles para Android e iOS, integrando servicios REST y asegurando UX de alta calidad. Gestión de equipos con Scrum y Redmine para cumplir objetivos eficientemente.",
+    },
+    {
+        date: "20219 - 2022",
+        title: "Unlimiteck | Company Builder - Mobile team leader",
+        description:
+            "Lideré equipos en el desarrollo de soluciones móviles y arquitecturas de APIs REST con Django y FastAPI. Automatización de despliegues con Jenkins y desarrollo de pruebas unitarias para garantizar eficiencia y calidad del código.",
+    },
+    {
+        date: "2018 - 2019",
+        title: "Hiberus Tegnologias | Mobile Developer",
+    },
+    {
+        date: "2017 - 2018",
+        title: "Hispano soluciones | Mobile Developer",
+    },
+    {
+        date: "2017 - 2018",
+        title: "Andrómeda Ventures | Product team leader",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIECE.map((item) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...item} />
+            </li>
+        ))
+    }
+</ol>

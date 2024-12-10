@@ -1,11 +1,93 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout
+    title="Roswer García - Desarrollador y Programador Full Stack"
+    description="Programador android y ios - python"
+>
+    <main class="px-4">
+        <SectionContainer class="py-44 pb-32">
+            <img
+                class="rounded-full size-12 mb-4"
+                src="https://avatars.githubusercontent.com/u/22887165?s=400&u=5d4f14f73dd5f150eb2fed195239c9d9817c5504&v=4"
+                alt="avatar"
+            />
+            <h1
+                class="text-white text-3xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-1 xl:pb-3"
+            >
+                Hola, soy Roswer García 👋
+            </h1>
+
+            <h2 class="text-gray-300/80 text-xl text-pretty pb-8">
+                Full-Stack Developer con experiencia en aplicaciones móviles y
+                backend.
+            </h2>
+            <div
+                class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+            >
+                <p>
+                    Comencé mi carrera en <strong>2017</strong> especializándome
+                    en aplicaciones <strong>Android</strong>, adquiriendo un
+                    sólido conocimiento en diseño y desarrollo para plataformas
+                    móviles.
+                </p>
+                <p>
+                    Mi tratectoria me ha llevado aprender en <strong
+                        >desarrollo multiplatorma</strong
+                    > y servicios <strong>Rest API</strong> para crar un entorno
+                    de desarrollo completo.
+                </p>
+                <p>
+                    Apasionado por transformar ideas en productos de calidad que
+                    marcan la diferencia.
+                </p>
+            </div>
+
+            <nav class="flex gap-4 mt-8 flex-wrap">
+                <SocialPill href="https://www.linkedin.com/in/roswergarcia/">
+                    <LinkedInIcon class="size-4 md:size-6" />
+                    LinkedIn
+                </SocialPill>
+
+                <SocialPill href="https://github.com/roswer13">
+                    <GitHubIcon class="size-4 md:size-6" />
+                    GitHub
+                </SocialPill>
+
+                <SocialPill href="mailto:roswer13@gmail.com">
+                    <MailIcon class="size-4 md:size-6" />
+                    roswer13@gmail.com
+                </SocialPill>
+            </nav>
+        </SectionContainer>
+
+        <SectionContainer id="experiencia">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <BriefcaseIcon class="size-7" />
+                Experiencia laboral
+            </h2>
+            <Experience />
+        </SectionContainer>
+
+        <SectionContainer id="proyectos">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <CodeIcon class="size-7" />
+                Proyectos
+            </h2>
+            <Projects />
+        </SectionContainer>
+    </main></Layout
+>
